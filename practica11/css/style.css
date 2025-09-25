@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(to right, black, darkred);
+}
+#encabezado {
+    background-color: red;
+    text-align: center;
+    padding: 8px;
+    font-size: 24px;
+    border: 3px solid black;
+    border-radius: 25px;
+    border-bottom: 10px solid black;
+}
+p {
+    color:black;
+}
+#articulos {
+background-color: red;
+padding: 10px;
+border: 3px solid black;
+margin: 20px;
+font-family: 'Courier New', Courier, monospace;
+border-radius: 25px;
+
+
+}
+#categorias {
+    background-color: red;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 20px;
+}
+li {
+    color: black;
+}
+@media (max-width: 600px) {
+    body {
+        background-color: darkred;
+    
+    }
+    #encabezado {
+        background-color: red;
+        font-size: 18px;
+    }
+}
