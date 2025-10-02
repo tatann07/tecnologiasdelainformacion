@@ -1,0 +1,37 @@
+body {
+    background-color: gray;
+    font-family: 'Courier New', Courier, monospace;
+     
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background-color: gray;
+    border: 2px solid gray;
+    border-radius: 10px;
+    justify-content: center;
+}
+.cuadro {
+    background-color: whitesmoke;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.cuadro:hover {
+    background-color: lightgrey;
+    transform: scale(1.1);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+}
+.morado {
+    background-color: purple;
+}
+.rosa {
+    background-color: pink;
+}
