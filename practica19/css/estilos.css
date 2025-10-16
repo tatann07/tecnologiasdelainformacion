@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe4f0; /* Fondo rosado claro */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* Contenedor principal ocupa todo el ancho y alto */
+.container {
+    display: grid;
+    grid-template-areas:
+        "banner banner"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    width: 100vw;   /* ocupa todo el ancho de la ventana */
+    height: 100vh;  /* ocupa todo el alto */
+    padding: 10px;  /* pequeño espacio interno para respiración */
+}
+
+/* --- Secciones --- */
+.banner {
+    grid-area: banner;
+    background-color: #f8b6c5;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #f6a5b3;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: #ffe6ec;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 10px;
+}
+
+.picture, .about, .tweets {
+    background-color: #f3c2d1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #d88fa2;
+    border-radius: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #f48ca6;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* 📱 MEDIA QUERY - MÓVILES */
+/* ============================= */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "banner"
+            "nav"
+            "main"
+            "picture"
+            "about"
+            "tweets"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .sidebar {
+        display: contents;
+    }
+
+    .banner, .nav, .main-content, .picture, .about, .tweets, .footer {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .main-content {
+        min-height: auto;
+    }
+}
