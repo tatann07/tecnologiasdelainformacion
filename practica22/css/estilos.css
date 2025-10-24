@@ -1,0 +1,12 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: light-dark(#333, #eee);
+    background-color: light-dark(#333, #eee);
+}
+:root {
+    color-scheme: light dark;
+
+}
